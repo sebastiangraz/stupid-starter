@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cssanimation/gulp-sass-starter.git"
+    "url": "git@github.com:umbriel/stupid-starter.git"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
