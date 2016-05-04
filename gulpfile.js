@@ -35,15 +35,15 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./src/javascripts/**/*.js'])
+  return gulp.src(['./src/js/**/*.js'])
     //.pipe(jshint('.jshintrc'))
     //.pipe(jshint.reporter('default'))
     .pipe(plumber())
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('dist/javascripts'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/javascripts'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -87,9 +87,13 @@ gulp.task('watch', function() {
   // Watch css files
   gulp.watch('src/stylesheets/**/*', ['styles', browserSync.reload]);
   // Watch .js files
-  gulp.watch('src/javascripts/*.js', ['scripts', browserSync.reload]);
+  gulp.watch('src/js/*.js', ['scripts', browserSync.reload]);
   // Watch image files
   gulp.watch('src/images/**/*', ['images', browserSync.reload]);
+});
+
+gulp.task('clean', function() {
+    return del(['dist/stylesheets', 'dist/js', 'dist/images']);
 });
 
 gulp.task('default', function() {
