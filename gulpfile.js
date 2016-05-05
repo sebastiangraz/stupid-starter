@@ -22,12 +22,15 @@ var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
 var nestedcss = require('postcss-nested');
 var corepostcss = require('postcss');
+var responsiveType = require('postcss-responsive-type');
+
 
 gulp.task('styles', function () {
     var processors = [
         autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
         simplevars,
-        nestedcss
+        nestedcss,
+        responsiveType
     ];
     return gulp.src('./src/stylesheets/*.css')
         .pipe(postcss(processors))
