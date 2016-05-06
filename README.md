@@ -4,6 +4,8 @@ Stupid starter
 
 to run
 
-npm install
+``npm install``
+  
+then
 
-gulp
+``gulp``
