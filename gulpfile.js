@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 
 var gutil = require('gulp-util');
 var postcss = require('gulp-postcss');
+var cssnano = require('gulp-cssnano');
 var simplevars = require('postcss-simple-vars');
 var autoprefixer = require('autoprefixer-core');
 var mqpacker = require('css-mqpacker');
@@ -34,6 +35,7 @@ gulp.task('styles', function () {
     ];
     return gulp.src('./src/stylesheets/*.css')
         .pipe(postcss(processors))
+        .pipe(cssnano())
         .pipe(gulp.dest('./dist/stylesheets'));
 });
 
