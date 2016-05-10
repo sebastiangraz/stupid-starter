@@ -2,39 +2,6 @@
   box-sizing : border-box;
 }
 
-body {
-  font-family : sans-serif;
-  margin      : 0 auto;
-  font-size: responsive 14px 18px;
-  line-height: 1.6;
-  background: linear-gradient(top, #eee,#fff);
-}
-
-h1 {
-  font-size: responsive 24px $size; /* min-size, max-size */
-  font-range: 320px 1200px;
-  margin: 0;
-}
-
-h2 {
-  font-size: responsive 20px 36px; /* min-size, max-size */
-  font-range: 480px 1200px;
-}
-
-h3 {
-  font-size: responsive 16px 28px; /* min-size, max-size */
-  font-range: 320px 1200px;
-}
-
-h4 {
-  font-size: responsive 14px 20px; /* min-size, max-size */
-  font-range: 320px 1200px;
-}
-
-p {
-  font-size: responsive 12px 18px; /* min-size, max-size */
-  font-range: 320px 1200px;
-}
 img {
   max-width: 100%;
   vertical-align: top;

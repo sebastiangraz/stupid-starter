@@ -1,0 +1,31 @@
+body {
+  font-family : sans-serif;
+  font-size: responsive 14px 18px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: responsive 24px 56px; /* min-size, max-size */
+  font-range: 320px 1200px;
+  margin: 0;
+}
+
+h2 {
+  font-size: responsive 20px 36px; /* min-size, max-size */
+  font-range: 480px 1200px;
+}
+
+h3 {
+  font-size: responsive 16px 28px; /* min-size, max-size */
+  font-range: 320px 1200px;
+}
+
+h4 {
+  font-size: responsive 14px 20px; /* min-size, max-size */
+  font-range: 320px 1200px;
+}
+
+p {
+  font-size: responsive 12px 18px; /* min-size, max-size */
+  font-range: 320px 1200px;
+}
