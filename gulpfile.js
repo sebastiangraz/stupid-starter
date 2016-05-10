@@ -58,6 +58,7 @@ gulp.task('scripts', function() {
 
 // Optimizes the images that exists
 gulp.task('images', function() {
+
   return gulp.src('src/images/**')
   .pipe(changed('dist/images'))
   .pipe(imagemin({
@@ -66,7 +67,9 @@ gulp.task('images', function() {
     // Interlace GIFs for progressive rendering
     interlaced: true
   }))
+
   .pipe(gulp.dest('dist/images'))
+
   .pipe(size({
     title: 'images'
   }));
@@ -103,8 +106,10 @@ gulp.task('watch', function() {
 });
 
 gulp.task('clean', function() {
-  return del(['dist/stylesheets', 'dist/js', 'dist/images']);
+  return del(['dist/stylesheets', 'dist/js', 'dist/images'])
+  cache.clearAll()
 });
+
 
 gulp.task('default', function() {
   gulp.start('styles', 'scripts', 'images', 'html', 'browser-sync', 'watch');
